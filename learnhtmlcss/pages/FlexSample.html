@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Demo FlexBox </title>
+        <style>
+            body{ 
+                padding: 2em;
+            }
+            .headerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: tomato;
+                font-weight: bold;
+                padding: 10px;
+                color: whitesmoke;
+            }
+            .footerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: lightgreen;
+                font-weight: bold;
+                padding: 10px;
+            }
+            .mainContainer{
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+            }
+            .mainContentItem{
+                text-align: left;
+                background: deepskyblue;
+            }
+            article{
+                padding: 10px;
+                margin: 10px;
+                background: aqua;
+            }
+            .sideBarLeftItem{
+                background: gold;
+            }
+            .sideBarRightItem{
+                background: hotpink;
+            }
+            .sideBarItem{
+                flex: 1 0 0;border: 0px solid green;
+            }
+            .mainContentItem{
+                flex: 3 0px;
+            }
+            .sideBarLeftItem{ order: 1;}
+            .mainContentItem{ order: 2;}
+            .sideBarRightItem{ order: 3;}
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - FlexBox Example</h1></header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>             
+                    <h2>First article</h2>
+                    <p>With CSS, you can control the color, font, the size of text, the spacing between elements, 
+                        how elements are positioned and laid out, what background images or background colors are to be used,
+                        different displays for different devices and screen sizes, and much more!</p>              
+                </article>
+                <article>
+                    <h2>Second article</h2>
+                    CSS can be added to HTML documents in 3 ways:
+                        Inline - by using the style attribute inside HTML elements
+                        Internal - by using a style element in the head section
+                        External - by using a link element to link to an external CSS file
+                </article>
+                <article>
+                    <h2>Third article</h2>
+                    Inline CSS
+                    An inline CSS is used to apply a unique style to a single HTML element.
+                    An inline CSS uses the style attribute of an HTML element.
+                </article>
+            </section>
+            <sideBar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left Side Bar</p></div></sideBar>
+            <sideBar class="sideBarItem sideBarRightItem"><div class="center"><p>Right Side Bar</p></div></sideBar>
+        </div>
+        <footer class="footerContainer">Footer</footer>
+    </body>
+</html>
